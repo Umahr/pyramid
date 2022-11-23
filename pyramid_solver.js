@@ -12,14 +12,14 @@ function readFile(fileList){
 }
 
 function process(input){
-	var vals = input.split(/\r?\n/);
-	var target = vals[0].replace('Target: ', '');
-	var total = "0";
-	var depth = "0";
-	var position = "0";
-	var goRight = 0;
-	var maxDepth;
-	var directions = new Array();
+	let vals = input.split(/\r?\n/);
+	let target = vals[0].replace('Target: ', '');
+	let total = "0";
+	let depth = "0";
+	let position = "0";
+	let goRight = 0;
+	let maxDepth;
+	let directions = new Array();
 	
 	vals.shift();
 	maxDepth  = vals.length - 1;
@@ -52,7 +52,7 @@ function process(input){
 				//now go up from the completely checked left node. if there is no where else to go, exit
 				if(depth == 0){
 					let error = "The value was not found in the pyramid.";
-					document.getElementById("output").innerHTML = error;
+					document.getElementById("output2").innerHTML = error;
 					break;
 				}else{
 					total = total / vals[depth][position];
